@@ -6,6 +6,7 @@ import Services from './components/Services'
 import Diaspora from './components/Diaspora'
 import Notices from './components/Notices'
 import Appointments from './components/Appointments'
+import AboutZimbabwe from './components/AboutZimbabwe'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
@@ -19,6 +20,7 @@ export default function App() {
       <Diaspora />
       <Notices />
       <Appointments />
+      <AboutZimbabwe />
       <Contact />
       <Footer />
     </div>

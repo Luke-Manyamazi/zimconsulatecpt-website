@@ -8,7 +8,7 @@ const links = {
     { label: 'Services', href: '#services' },
     { label: 'Diaspora Opportunities', href: '#diaspora' },
     { label: 'Public Notices', href: '#notices' },
-    { label: 'Appointments', href: '#appointments' },
+    { label: 'About Zimbabwe', href: '#zimbabwe' },
     { label: 'Contact', href: '#contact' },
   ],
   'Services': [
