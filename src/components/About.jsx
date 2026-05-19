@@ -84,16 +84,6 @@ export default function About() {
           </div>
         </div>
 
-        {/* Zimbabwe flag strip */}
-        <FadeIn delay={0.3}>
-          <div className="mt-16 flex justify-center">
-            <img
-              src="/ZimFlag.png"
-              alt="Flag of Zimbabwe"
-              className="w-full max-w-sm rounded-xl shadow-md"
-            />
-          </div>
-        </FadeIn>
       </div>
     </section>
   )

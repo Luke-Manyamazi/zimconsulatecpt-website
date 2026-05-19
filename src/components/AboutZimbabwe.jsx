@@ -107,23 +107,23 @@ export default function AboutZimbabwe() {
             animate={inView ? { opacity: 1 } : {}}
             className="text-zim-gold font-semibold uppercase tracking-widest text-sm mb-3"
           >
-            Discover
+            The Jewel of Africa
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.1 }}
-            className="font-heading font-bold text-3xl md:text-4xl mb-4"
+            className="font-heading font-bold text-3xl md:text-5xl mb-4"
           >
-            About <span className="text-zim-gold">Zimbabwe</span>
+            Discover <span className="text-zim-gold">Zimbabwe</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.2 }}
-            className="text-white/60 max-w-2xl mx-auto"
+            className="text-white/60 max-w-2xl mx-auto text-lg"
           >
-            A landlocked nation in southern Africa with extraordinary wildlife, ancient heritage, breathtaking landscapes, and warm, welcoming people.
+            Ancient wonders. Wild frontiers. Warm people. Zimbabwe is one of Africa's most rewarding destinations — and it's waiting for you.
           </motion.p>
         </div>
 
