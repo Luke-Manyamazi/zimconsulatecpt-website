@@ -55,7 +55,7 @@ const notices = [
   },
 ]
 
-const MOBILE_INITIAL = 2
+const INITIAL_COUNT = 3
 
 function PlaceholderPDF({ title }) {
   return (
@@ -247,8 +247,8 @@ export default function Notices() {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true })
 
-  const visibleOnMobile = showAll ? notices : notices.slice(0, MOBILE_INITIAL)
-  const hidden = notices.length - MOBILE_INITIAL
+  const visible = showAll ? notices : notices.slice(0, INITIAL_COUNT)
+  const hidden = notices.length - INITIAL_COUNT
 
   return (
     <section id="notices" className="py-24 bg-white">
@@ -279,34 +279,27 @@ export default function Notices() {
           </motion.p>
         </div>
 
-        {/* Mobile: show limited notices + expand button */}
-        <div className="sm:hidden space-y-3">
+        {/* All screen sizes: 3 initially, expand on demand */}
+        <div className="space-y-3 sm:space-y-4">
           <AnimatePresence initial={false}>
-            {visibleOnMobile.map((notice, i) => (
+            {visible.map((notice, i) => (
               <NoticeCard key={notice.id} notice={notice} onRead={setSelected} index={i} />
             ))}
           </AnimatePresence>
-
-          {notices.length > MOBILE_INITIAL && (
-            <button
-              onClick={() => setShowAll(v => !v)}
-              className="w-full flex items-center justify-center gap-2 py-3 text-sm font-semibold text-zim-green border border-zim-green/30 rounded-xl hover:bg-zim-green/5 transition-colors"
-            >
-              {showAll ? (
-                <><HiChevronUp size={18} /> Show less</>
-              ) : (
-                <><HiChevronDown size={18} /> Show {hidden} more notice{hidden !== 1 ? 's' : ''}</>
-              )}
-            </button>
-          )}
         </div>
 
-        {/* Desktop: show all notices */}
-        <div className="hidden sm:block space-y-4">
-          {notices.map((notice, i) => (
-            <NoticeCard key={notice.id} notice={notice} onRead={setSelected} index={i} />
-          ))}
-        </div>
+        {notices.length > INITIAL_COUNT && (
+          <button
+            onClick={() => setShowAll(v => !v)}
+            className="mt-4 w-full flex items-center justify-center gap-2 py-3 text-sm font-semibold text-zim-green border border-zim-green/30 rounded-xl hover:bg-zim-green/5 transition-colors"
+          >
+            {showAll ? (
+              <><HiChevronUp size={18} /> Show less</>
+            ) : (
+              <><HiChevronDown size={18} /> Show {hidden} more notice{hidden !== 1 ? 's' : ''}</>
+            )}
+          </button>
+        )}
       </div>
 
       {/* PDF Modal */}
