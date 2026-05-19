@@ -1,6 +1,8 @@
-import { useRef } from 'react'
-import { motion, useInView } from 'framer-motion'
-import { HiBriefcase, HiAcademicCap, HiCurrencyDollar, HiHome, HiGlobeAlt, HiArrowRight, HiClock } from 'react-icons/hi'
+import { useRef, useState } from 'react'
+import { motion, useInView, AnimatePresence } from 'framer-motion'
+import { HiBriefcase, HiAcademicCap, HiCurrencyDollar, HiHome, HiGlobeAlt, HiArrowRight, HiClock, HiChevronDown, HiChevronUp } from 'react-icons/hi'
+
+const INITIAL_COUNT = 3
 
 const opportunities = [
   {
@@ -89,6 +91,10 @@ function FadeIn({ children, delay = 0 }) {
 export default function Diaspora() {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true })
+  const [showAll, setShowAll] = useState(false)
+
+  const visible = showAll ? opportunities : opportunities.slice(0, INITIAL_COUNT)
+  const hidden = opportunities.length - INITIAL_COUNT
 
   return (
     <section id="diaspora" className="py-24 bg-gray-50">
@@ -121,7 +127,7 @@ export default function Diaspora() {
 
         {/* Opportunity cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {opportunities.map((opp, i) => (
+          {visible.map((opp, i) => (
             <FadeIn key={opp.title} delay={i * 0.07}>
               <div className="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-zim-green/30 transition-all duration-200 flex flex-col h-full">
                 <div className="p-6 flex-1">
@@ -165,6 +171,20 @@ export default function Diaspora() {
             </FadeIn>
           ))}
         </div>
+
+        {/* Show more / less */}
+        {opportunities.length > INITIAL_COUNT && (
+          <button
+            onClick={() => setShowAll(v => !v)}
+            className="mt-6 w-full flex items-center justify-center gap-2 py-3 text-sm font-semibold text-zim-green border border-zim-green/30 rounded-xl hover:bg-zim-green/5 transition-colors"
+          >
+            {showAll ? (
+              <><HiChevronUp size={18} /> Show less</>
+            ) : (
+              <><HiChevronDown size={18} /> Show {hidden} more opportunit{hidden !== 1 ? 'ies' : 'y'}</>
+            )}
+          </button>
+        )}
 
         {/* CTA strip */}
         <FadeIn delay={0.3}>
