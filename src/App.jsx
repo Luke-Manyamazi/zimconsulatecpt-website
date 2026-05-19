@@ -16,11 +16,11 @@ export default function App() {
       <Navbar />
       <Hero />
       <About />
+      <AboutZimbabwe />
       <Services />
       <Diaspora />
       <Notices />
       <Appointments />
-      <AboutZimbabwe />
       <Contact />
       <Footer />
     </div>
