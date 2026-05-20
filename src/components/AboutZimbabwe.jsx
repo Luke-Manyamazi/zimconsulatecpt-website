@@ -30,7 +30,7 @@ const highlights = [
   {
     title: 'People & Culture',
     body: 'Home to the Shona and Ndebele peoples, Zimbabwe boasts rich art, music, and sculpture traditions — with one of Africa\'s highest literacy rates at over 90%.',
-    img: 'https://images.unsplash.com/photo-1531746790733-246659680098?auto=format&fit=crop&w=800&q=80',
+    img: '/peopleandculture.jpg',
   },
 ]
 
