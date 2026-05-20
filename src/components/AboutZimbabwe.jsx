@@ -15,21 +15,21 @@ const highlights = [
   {
     title: 'Climate',
     body: "Zimbabwe enjoys one of Africa's finest climates — warm and sunny with 4–10 hours of sunshine daily. Rainy season runs November–April; winter (May–July) is dry and mild.",
-    img: 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=800&q=80',
+    img: '/easternhighlands.jpg',
   },
   {
     title: 'Victoria Falls',
     body: "One of the Seven Natural Wonders of the World. Mosi-oa-Tunya — \"the smoke that thunders\" — sees 5.45 million litres plunge 106 m every minute along the Zambezi River.",
-    img: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80',
+    img: '/vicfalls.jpg',
   },
   {
     title: 'Great Zimbabwe',
     body: "The ancient stone city of Great Zimbabwe is the largest pre-colonial structure in sub-Saharan Africa and a UNESCO World Heritage Site — the very name the country is built on.",
-    img: 'https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?auto=format&fit=crop&w=800&q=80',
+    img: '/greatzimbabwe.jpeg',
   },
   {
     title: 'People & Culture',
-    body: 'Home to the Shona and Ndebele peoples, Zimbabwe boasts rich art, music, and sculpture traditions — with one of Africa\'s highest literacy rates at over 90%.',
+    body: "Home to the Shona and Ndebele peoples, Zimbabwe boasts rich art, music, and sculpture traditions — with one of Africa's highest literacy rates at over 90%.",
     img: '/peopleandculture.jpg',
   },
 ]
@@ -39,37 +39,37 @@ const destinations = [
     name: 'Victoria Falls',
     region: 'Matabeleland North',
     description: 'Bungee jumping, white-water rafting, sunset river cruises on the mighty Zambezi.',
-    img: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=900&q=80',
+    img: '/vicfalls.jpg',
   },
   {
     name: 'Hwange National Park',
     region: 'Matabeleland North',
     description: "Zimbabwe's largest game reserve — over 40,000 elephants, lions, leopards, and painted wolves.",
-    img: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=900&q=80',
+    img: '/hwange.jpg',
   },
   {
     name: 'Great Zimbabwe Ruins',
     region: 'Masvingo',
     description: 'Ancient 11th-century stone city. UNESCO World Heritage Site and cradle of Zimbabwean civilisation.',
-    img: 'https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?auto=format&fit=crop&w=900&q=80',
+    img: '/greatzimbabwe.jpeg',
   },
   {
     name: 'Matobo Hills',
     region: 'Matabeleland South',
     description: 'Extraordinary granite landscape, ancient San rock art, and white rhino tracking safaris.',
-    img: 'https://images.unsplash.com/photo-1580654712603-eb61d3e0085a?auto=format&fit=crop&w=900&q=80',
+    img: '/matobo.jpg',
   },
   {
     name: 'Eastern Highlands',
     region: 'Manicaland',
     description: "Zimbabwe's \"little Switzerland\" — lush peaks, tea estates, trout fishing, and Nyanga National Park.",
-    img: 'https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=900&q=80',
+    img: '/easternhighlands.jpg',
   },
   {
     name: 'Lake Kariba',
     region: 'Mashonaland West',
     description: "One of the world's largest man-made lakes. Houseboat safaris, tiger fishing, fiery sunsets.",
-    img: 'https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=900&q=80',
+    img: '/lakekariba.jpg',
   },
 ]
 
@@ -235,7 +235,7 @@ export default function AboutZimbabwe() {
               className="group relative rounded-2xl overflow-hidden h-44 flex items-end"
             >
               <img
-                src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=900&q=80"
+                src="/vicfalls.jpg"
                 alt="Visit Zimbabwe"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
@@ -259,7 +259,7 @@ export default function AboutZimbabwe() {
               className="group relative rounded-2xl overflow-hidden h-44 flex items-end"
             >
               <img
-                src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=900&q=80"
+                src="/hwange.jpg"
                 alt="Apply for a Visa"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
